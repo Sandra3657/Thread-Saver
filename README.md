@@ -1,4 +1,6 @@
-# Twitter Thread Saver
+# Threadify
+
+A web application where users can view or download their saved threads.
 
 ## Installation
 
@@ -19,3 +21,6 @@ For linux: `. venv/bin/activate`
 
 ### Install packages
 `pip install -r requirements.txt`
+
+### Development
+Run `flask run`
