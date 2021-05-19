@@ -6,8 +6,8 @@ A web application where users can view or download their saved threads.
 
 ### Clone project
 
-`git clone https://github.com/Sandra3657/Thread-Saver.git`\
-`cd Tread-Saver`
+`git clone https://github.com/Sandra3657/Threadify.git`\
+`cd Treadify`
 
 ### Create virtual environment
 
