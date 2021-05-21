@@ -16,9 +16,9 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 #To get ID of user
-user = api.get_user("thomas_akshaya")
+user = api.get_user("username")
 print(user.id_str)
 
 #sending direct message
-recipient_id = "1393800988004323328"  # ID of the user
+recipient_id = "id_of_user"  # ID of the user
 api.send_direct_message(recipient_id, "Hi")
