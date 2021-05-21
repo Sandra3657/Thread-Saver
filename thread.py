@@ -61,9 +61,11 @@ def get_thread(dict):
         if result_count > 0:
             data = json_response['data']
             thread = [tweet['text'] for tweet in data]
-        # threads.append({'id': id, 'thread': thread})
-        threads.append(thread.reverse())
+            rev_thread = list(reversed(thread))
+            print(len(thread))   # threads.append({'id': id, 'thread': thread})
+        threads.append(rev_thread)
     print(threads)
+    return threads
 
 
 def main():

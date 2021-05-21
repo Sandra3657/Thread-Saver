@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import time
+from thread import get_thread
 
 def auth():
     return os.environ.get("BEARER_TOKEN")
@@ -70,6 +71,7 @@ def main():
         # dict = []
         since_id, dict = get_data(since_id, bearer_token)
         print(dict)
+        get_thread(dict)
         
         time.sleep(30)
 
