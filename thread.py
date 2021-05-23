@@ -2,9 +2,11 @@ import requests
 import os
 import json
 import time
+from dotenv import load_dotenv
+load_dotenv()
 
 def auth():
-    return os.environ.get("BEARER_TOKEN")
+    return os.getenv("BEARER_TOKEN")
 
 
 def create_url(ref_id, author_id,main_tweet = False):

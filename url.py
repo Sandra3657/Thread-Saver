@@ -1,9 +1,11 @@
 import os
 import requests
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 def auth():
-    return os.environ.get("BEARER_TOKEN")
+    return os.getenv("BEARER_TOKEN")
 
 def get_params(type):
     params = {

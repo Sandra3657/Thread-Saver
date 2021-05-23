@@ -1,11 +1,13 @@
-import requests
 import os
+import requests
 import json
 import time
 from thread import get_thread
+from dotenv import load_dotenv
+load_dotenv()
 
 def auth():
-    return os.environ.get("BEARER_TOKEN")
+    return os.getenv("BEARER_TOKEN")
 
 
 def create_url(user_id):

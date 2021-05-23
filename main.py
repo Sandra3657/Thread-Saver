@@ -6,13 +6,9 @@ import time
 from dm import send_threads
 
 
-def auth():
-    return os.environ.get("BEARER_TOKEN")
-
 def main():
     username = "threadifier"
     user_id = get_user_id(username)
-    bearer_token = auth()
     since_id = None
     while True:
         since_id, mentioned_tweets = get_data(user_id, since_id)
