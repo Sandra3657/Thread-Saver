@@ -50,30 +50,35 @@ def connect_to_endpoint(url, headers, params):
 def get_thread(dict):
     threads = []
     for item in dict:
-        thread = []
+        thread = {}
         bearer_token = auth()
         headers = create_headers(bearer_token)
         params = get_params()
-        # id = item['author_id']
         conversation_id = item['conversation_id']
         in_reply_to_user_id = item['in_reply_to_user_id']
+        thread['id'] = item['id']
+        thread['text'] = ""
 
         main_tweet_url = create_url(conversation_id, in_reply_to_user_id, True)
         main_tweet_json_response = connect_to_endpoint(main_tweet_url, headers, params)
         main_tweet  = main_tweet_json_response['data']['text']
-        thread = [main_tweet]
+        # thread = [main_tweet]
+        thread['text'] = main_tweet + "\n"
 
         url = create_url(conversation_id, in_reply_to_user_id)
         json_response = connect_to_endpoint(url, headers, params)
         print(json.dumps(json_response, indent=4, sort_keys=True))
         result_count = json_response['meta']['result_count']
         if result_count > 0:
+            text_list = []
             data = list(reversed(json_response['data']))
             # thread.append(tweet['text'] for tweet in data)
             for tweet in data:
-                thread.append(tweet['text'])
+                text_list.append(tweet['text'])
             # rev_thread = list(reversed(thread))
-            threads.append(thread)
+            print(thread['text']+"\n".join(text_list))
+            thread['text'] = thread['text'] + "\n".join(text_list)
+        threads.append(thread)
     return threads
 
 
