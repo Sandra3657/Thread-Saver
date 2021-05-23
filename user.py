@@ -9,7 +9,6 @@ def auth():
 
 
 def create_url(user_id):
-    # Replace with user ID below
     return  "https://api.twitter.com/2/users/by/username/{}".format(user_id)
 
 
@@ -41,6 +40,3 @@ def get_user_id(username):
     json_response = connect_to_endpoint(url, headers, params)
     if json_response['data']:
         return json_response['data']['id']
-
-
-# print(get_user_id("Parvath39935492"))
