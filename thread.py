@@ -61,7 +61,8 @@ def get_thread(dict):
             text_list = []
             data = list(reversed(json_response['data']))
             for tweet in data:
-                text_list.append(tweet['text'])
+                if tweet["author_id"] == tweet["in_reply_to_user_id"]:
+                    text_list.append(tweet['text'])
             print(thread['text']+"\n".join(text_list))
             thread['text'] = thread['text'] + "\n".join(text_list)
         threads.append(thread)

@@ -7,7 +7,7 @@ from dm import send_threads
 
 
 def main():
-    username = "threadifier"
+    username = "Threadifier"
     user_id = get_user_id(username)
     since_id = None
     while True:

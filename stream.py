@@ -40,6 +40,7 @@ def connect_to_endpoint(url, headers, params):
 
 def get_data(user_id, since_id):
     dict = []
+    list1 = []
     bearer_token = auth()
     url = create_url(user_id, since_id)
     headers = create_headers(bearer_token)
@@ -54,7 +55,17 @@ def get_data(user_id, since_id):
         return (since_id,dict)
     since_id  = json_response['meta']['newest_id']
     data = json_response['data']
+    new_file = open("tweet_id.txt","r+")
+    for line in new_file:
+        list1.append(line.rstrip("\n"))
+    #f1 = new_file.read()
     for tweet in data:
-        if tweet.get('in_reply_to_user_id'):
-            dict.append({'id': tweet['author_id'], 'conversation_id': tweet['conversation_id'], 'in_reply_to_user_id': tweet['in_reply_to_user_id']})
+        check = tweet['id']
+        print(str(check))
+        if str(check) not in list1:
+                new_file.write(tweet["id"]+"\n")
+                if tweet.get('in_reply_to_user_id'):
+                    dict.append({'id': tweet['author_id'], 'conversation_id': tweet['conversation_id'], 'in_reply_to_user_id': tweet['in_reply_to_user_id']})
+    print(list1)
+    new_file.close()
     return (since_id,dict)
