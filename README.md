@@ -56,7 +56,8 @@ Instructions for running
 
 ##Team Members
 1.Sandra Kakkarayil Jayakumar[https://github.com/Sandra3657]  
-2.Parvathy P[
-3.Akshaya Thomas 
+2.Parvathy P[https://github.com/parvathyp301]
+3.Akshaya Thomas[https://github.com/akshayathomas2001]
+
 ##Team ID
 
