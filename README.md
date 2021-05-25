@@ -55,8 +55,8 @@ Instructions for setting up project
 Instructions for running
 
 ##Team Members
-1.Sandra Kakkarayil Jayakumar  
-2.Parvathy P
+1.Sandra Kakkarayil Jayakumar[https://github.com/Sandra3657]  
+2.Parvathy P[
 3.Akshaya Thomas 
 ##Team ID
 
