@@ -13,10 +13,10 @@ def main():
     while True:
         since_id, mentioned_tweets = get_data(user_id, since_id)
         print(mentioned_tweets)
-        time.sleep(10)
+        time.sleep(2)
         threads = get_thread(mentioned_tweets)
         print(threads)
-        time.sleep(10)
+        time.sleep(2)
         send_threads(threads)
         time.sleep(60)
 
