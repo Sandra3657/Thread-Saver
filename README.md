@@ -4,7 +4,9 @@
 A twitter bot that sends threads of a tweet as dm to the users who mentioned it.
 
 ## How to use?
-The user has to just mention **@threadifier** in any of the tweets of the thread. The tweets of the thread will be then compiled together and then sent as a DM to the user.
+The user has to just mention **@threadifier** as a reply to any of the tweets of the thread. The tweets of the thread will be then compiled together and then sent as a DM to the user.
+
+*The user may have to enable the setting to receive message requests from anyone on Twitter even if the user doesn't follow them*
 
 ## How it Works ?
 The bot checks for mentions from users. From the mentioned tweet the bot takes the conversation id of the entire thread. Conversation id is same for tweets in a particular thread. Then using conversation id we get the entire thread and avoid the replies from other users so as to get the tweets from the tweet author only . Then those threads will be send as DMs to corresponding user who tagged the bot.
