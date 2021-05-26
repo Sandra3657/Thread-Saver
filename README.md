@@ -1,5 +1,5 @@
 ![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)
-# Threadify
+# Threadifier
 
 A twitter bot that sends threads of a tweet as dm to the users who mentioned it.
 
@@ -10,21 +10,21 @@ The user has to just mention **@threadifier** in any of the tweets of the thread
 The bot checks for mentions from users. From the mentioned tweet the bot takes the conversation id of the entire thread. Conversation id is same for tweets in a particular thread. Then using conversation id we get the entire thread and avoid the replies from other users so as to get the tweets from the tweet author only . Then those threads will be send as DMs to corresponding user who tagged the bot.
 
 ## Team Members
-1. Sandra Kakkarayil Jayakumar[https://github.com/Sandra3657]  
-2. Parvathy P[https://github.com/parvathyp301]
-3. Akshaya Thomas[https://github.com/akshayathomas2001]
+1. [Sandra Kakkarayil Jayakumar](https://github.com/Sandra3657)
+2. [Parvathy P](https://github.com/parvathyp301)
+3. [Akshaya Thomas](https://github.com/akshayathomas2001)
 
 ## Team ID
 BFH/recANMvYohi0GiMRj/2021
 
 ## Link to product walkthrough
-[https://www.loom.com/share/78be470fe59c46e193dd672c42740296]
+[Product Walkthrough](https://www.loom.com/share/78be470fe59c46e193dd672c42740296)
 
 ## How to configure for local development
 Instructions for setting up project
 
 ### 1. Twitter Development Account
-Create a twitteer developer account.
+Create a twitter developer account.
 
 ### 2. Clone project
 
